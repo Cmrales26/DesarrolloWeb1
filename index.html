@@ -14,13 +14,18 @@
           <nav class="navbar">
                <div class="logo">
                     <a href="https://www.cuc.edu.co/" target="_blank"><img src="./img/LogoUniversidaddelaCostaCUC.png"
-                              alt="Logo" width="300px" height="100px"></a>
+                              alt="Logo" width="250px" height="80px"></a>
                </div>
-               <ul>
-                    <li><a href="https://www.cuc.edu.co/" target="_blank">Inicio</a></li>
-                    <li><a href="https://www.cuc.edu.co/contactanos" target="_blank">Contacto</a></li>
-                    <li id="info"><a href="#mas-info">MAS Información</a></li>
+               <ul id="navlink">
+                    <li><a  href="https://www.cuc.edu.co/" target="_blank">Inicio</a></li>
+                    <li><a  href="https://www.cuc.edu.co/contactanos" target="_blank">Contacto</a></li>
+                    <li id="info"><a  href="#mas-info">MAS Información</a></li>
                </ul>
+               <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+               </div>
                </div>
           </nav>
      </header>
@@ -34,7 +39,8 @@
                          <h1>Internet</h1>
                     </div>
                     <div class="descripcion">
-                         <p>Internet es una red global de computadoras que permite el intercambio de información y servicios, y es accesible a través de dispositivos conectados a ella.
+                         <p>Internet es una red global de computadoras que permite el intercambio de información y
+                              servicios, y es accesible a través de dispositivos conectados a ella.
                          </p>
                     </div>
                     <div class="card-mas-informacion">
@@ -48,7 +54,8 @@
                          <h1>¿Que es la web?</h1>
                     </div>
                     <div class="descripcion">
-                         <p>La web es una plataforma en línea que permite la creación, publicación y acceso a sitios y páginas web a través de navegadores web.</p>
+                         <p>La web es una plataforma en línea que permite la creación, publicación y acceso a sitios y
+                              páginas web a través de navegadores web.</p>
                     </div>
                     <div class="card-mas-informacion">
                          <a href="http://" target="_blank" rel="noopener noreferrer">MAS INFORMACIÓN</a>
@@ -61,7 +68,8 @@
                          <h1>Arquitectura cliente servidor</h1>
                     </div>
                     <div class="descripcion">
-                         <p>La arquitectura cliente-servidor es un modelo de comunicación donde un cliente solicita servicios o recursos a un servidor a través de una red.</p>
+                         <p>La arquitectura cliente-servidor es un modelo de comunicación donde un cliente solicita
+                              servicios o recursos a un servidor a través de una red.</p>
                     </div>
                     <div class="card-mas-informacion">
                          <a href="http://" target="_blank" rel="noopener noreferrer">MAS INFORMACIÓN</a>
@@ -76,7 +84,8 @@
                          <h1>Web Estática</h1>
                     </div>
                     <div class="descripcion">
-                         <p>Una web estática es una página web que muestra información fija y no cambia según la interacción del usuario. Se crea con HTML y CSS.</p>
+                         <p>Una web estática es una página web que muestra información fija y no cambia según la
+                              interacción del usuario. Se crea con HTML y CSS.</p>
                     </div>
                     <div class="card-mas-informacion">
                          <a href="http://" target="_blank" rel="noopener noreferrer">MAS INFORMACIÓN</a>
@@ -89,7 +98,8 @@
                          <h1>Web dinámica</h1>
                     </div>
                     <div class="descripcion">
-                         <p>Una web dinámica es una página web que cambia su contenido según la interacción del usuario. Se crea con lenguajes de programación como PHP y JavaScript.</p>
+                         <p>Una web dinámica es una página web que cambia su contenido según la interacción del usuario.
+                              Se crea con lenguajes de programación como PHP y JavaScript.</p>
                     </div>
                     <div class="card-mas-informacion">
                          <a href="http://" target="_blank" rel="noopener noreferrer">MAS INFORMACIÓN</a>
@@ -102,7 +112,8 @@
                          <h1>Frontend vs backend</h1>
                     </div>
                     <div class="descripcion">
-                         <p>Frontend es la parte visible de una aplicación web, mientras que Backend se encarga del procesamiento y almacenamiento de datos.</p>
+                         <p>Frontend es la parte visible de una aplicación web, mientras que Backend se encarga del
+                              procesamiento y almacenamiento de datos.</p>
                     </div>
                     <div class="card-mas-informacion">
                          <a href="http://" target="_blank" rel="noopener noreferrer">MAS INFORMACIÓN</a>
@@ -112,7 +123,8 @@
      </section>
 
      <section id="Estructuras">
-          <h1 style="text-align: center; margin-top: 2%; margin-bottom: 2%; color: #9C0404;">ESTRUCTURAS DE UN DOCUMENTO HTML</h1>
+          <h1 style="text-align: center; padding-top: 5%; margin-bottom: 2%; color: #9C0404;">ESTRUCTURAS DE UN
+               DOCUMENTO HTML</h1>
 
           <div class="htmlContenedor contenido">
                <div class="imagen_html">
@@ -203,10 +215,9 @@
      </section>
 
      <section id="mas-info">
-          <hr style="height: 3px; border: none; background-color:rgb(156, 4, 4); ;">
           <div class="contenedor-mas-informacion">
                <div class="masinformacion">
-                    <h1 style="color: #9C0404;" >MÁS INFORMACIÓN</h1>
+                    <h1 style="color: #9C0404;">MÁS INFORMACIÓN</h1>
                     <p>Si necesitas conocer mas información sobre html y la web, déjanos tu información para realizar
                          una clase asesorada con la finalidad de aclarar todo tud dudas</p>
                </div>
@@ -232,8 +243,15 @@
                               </tr>
                               <tr class="tr-form">
                                    <td>Genero</td>
-                                   <td><input type="radio" name="Genero">Masculino <input type="radio"
-                                             name="Genero">Femenino</td>
+                                   <td>
+                                        <div>
+                                             <input type="radio" id="Gen1" name="gen" value="email" />
+                                             <label class="gen1 gen" for="Gen1">Masculino</label>
+
+                                             <input type="radio" id="Gen2" name="gen" value="phone" />
+                                             <label class="gen2 gen" for="Gen2">Femenino</label>
+                                        </div>
+                                   </td>
                               </tr>
                               <thead class="th-form">
                                    <tr>
@@ -254,7 +272,7 @@
                               </tr>
                               <thead class="th-form">
                                    <tr>
-                                        <th colspan="2">INFORMACIÓN OPCIONAL</th>
+                                        <th colspan="2">INF ORMACIÓN OPCIONAL</th>
                                    </tr>
                               </thead>
                               <tr class="tr-form">
@@ -263,31 +281,36 @@
                               </tr>
                               <tr class="tr-form">
                                    <td>OBSERVACIONES</td>
-                                   <td colspan="2"><textarea name="" id="" cols="25" rows="5"></textarea></td>
+                                   <td colspan="1"><textarea name="" id="text-area" cols="auto" rows="5"></textarea>
+                                   </td>
                               </tr>
                               <tr>
-                                   <td colspan="2" class="buttonsubmit"><input id="Enviar" type="submit" value="ENVIAR"> </td>
+                                   <td colspan="2" class="buttonsubmit"><input id="Enviar" type="submit" value="ENVIAR">
+                                   </td>
                               </tr>
                          </form>
                     </table>
                </div>
           </div>
      </section>
-     
+
      <Footer id="Footer">
           <div class="container_footer">
-              <div class="box_footer">
-                  <div class="contacto">
-                          <H4>CREADO Y DISEÑADO POR</H4>
-                          <P> <a href="https://aulavirtual.cuc.edu.co/user/profile.php?id=2409" target="_blank">NELSON MORALES</a></P>
-                  </div>
-              </div>
+               <div class="box_footer">
+                    <div class="contacto">
+                         <H4>CREADO Y DISEÑADO POR</H4>
+                         <P> <a href="https://aulavirtual.cuc.edu.co/user/profile.php?id=2409" target="_blank">NELSON
+                                   MORALES</a></P>
+                    </div>
+               </div>
           </div>
           <div class="aviso-footer">
-              <hr>
-              <p>Este sitio ha sido creado para fines académicos.</p>
+               <hr>
+               <p>Este sitio ha sido creado para fines académicos.</p>
           </div>
-      </Footer>
+     </Footer>
+
+     <script src="./js/index.js"></script>
 </body>
 
 
