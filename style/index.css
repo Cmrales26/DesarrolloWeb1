@@ -97,6 +97,7 @@ li:hover {
     justify-content: center;
 }
 
+
 .card {
     margin: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -106,8 +107,11 @@ li:hover {
     width: 350px;
     height: 470px;
     max-height: fit-content;
+    transition: all .4s ease;
 }
-
+.card:hover{
+    scale: 1.05;
+}
 .titulo h1 {
     text-align: center;
     color: #9C0404;
