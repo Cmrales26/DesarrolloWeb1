@@ -13,6 +13,18 @@ html {
 body {
     background-color: #9C0404;
 }
+body::-webkit-scrollbar{
+    background-color: transparent;
+    width:10px;
+}
+body:hover::-webkit-scrollbar{
+    width: 2px;
+}
+body::-webkit-scrollbar-thumb{
+    cursor: pointer;
+    background-color: white;
+    min-height: 2px;
+}
 
 h1,
 h3 {
