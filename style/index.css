@@ -38,6 +38,9 @@ span {
 .navbar .logo{
     margin: 0px 60px;
 }
+.logo img{
+    filter: brightness(0) saturate(100%) invert(7%) sepia(97%) saturate(7500%) hue-rotate(22deg) brightness(100%) contrast(108%);
+}
 
 .navbar ul{
     margin: 2% 5%;
@@ -56,6 +59,11 @@ li {
 .navbar ul li a {
     color: rgb(156, 4, 4);
     text-decoration: none;
+}
+.fa-house,
+.fa-address-book,
+.fa-circle-info{
+    display: none;
 }
 .hamburger{
     margin: 2% 5%;
@@ -98,12 +106,11 @@ li:hover {
 }
 
 
-.card {
+.card{
     margin: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     border-radius: 10px;
     background: white;
-    color: #9C0404;
     width: 350px;
     height: 470px;
     max-height: fit-content;
@@ -113,7 +120,10 @@ li:hover {
     scale: 1.05;
 }
 .titulo h1 {
-    text-align: center;
+    /* text-align: center; */
+    padding: 5% 5% 0%;
+    font-size: 18px;
+    /* text-align: center; */
     color: #9C0404;
 }
 
@@ -125,7 +135,7 @@ li:hover {
 }
 
 .descripcion {
-    padding: 5%;
+    padding: 0 5% 10% 5%;
     text-align: justify;
 }
 
@@ -155,6 +165,7 @@ li:hover {
 .imagen_html,
 .imagen_css,
 .imagen_js {
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,29 +188,85 @@ li:hover {
     margin-left: 5%;
     text-align: justify;
 }
+.check{
+    display: none;
+}
+.ver-mas-def{
+    cursor: pointer;
+    visibility: hidden;
+}
 
-.def-tablas {
-    margin-top: 2%;
+.Maquetacion{
+    margin-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
     color: white;
     font-weight: 400;
     line-height: 30px;
 }
-
-.def-tablas h1 {
-    color: white;
+.def-maquetacion{
+    width: 50%;
 }
 
-.tabla {
+.def-maquetacion h1 {
+    margin-bottom: 2%;
+    color: white;
+}
+.def-maquetacion p {
+    text-align: justify;
+}
+.imagen-maqueta{
+    width: auto;
+}
+.imagen-maqueta img{
+    width: 100%;
+}
+.elemento-basicos-maquetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.def-elemetos-basicos{
+    width:40%;
+}
+
+.def-elemetos-basicos p{
+    color:  white;
+    text-align: justify;
+}
+
+.tabla{
     align-items: center;
     justify-content: center;
     display: flex;
     margin-top: 2%;
-    width: 100%;
+    width: 610px;
 }
 
-table {
-    text-align: left;
-    width: 80%;
+#Table_Componentes{
+    border-radius: 15px;
+    display: block;
+    height: 300px;
+    overflow-y: scroll;
+    text-align: center;
+    width: 100%;
+}
+#Table_Componentes::-webkit-scrollbar{
+    background-color: transparent;
+    width: 3px;
+}
+#Table_Componentes::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 15px;
+}
+.elemento{
+    color: #9C0404;
+    width: 3px;
+    font-weight: bold;
 }
 
 th,
@@ -207,10 +274,10 @@ td {
     padding: 10px;
 }
 
+
 thead {
     color: #9C0404;
 }
-
 .tr_table:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.479);
 }
@@ -239,6 +306,7 @@ thead {
 .masinformacion {
     width: 50%;
     margin: auto;
+    text-align: justify;
     /* margin-bottom: 5%; */
 }
 
@@ -269,18 +337,20 @@ input[type=email] {
     padding-left: 5%;
 }
 
-.formulario::-webkit-scrollbar {
+.formulario::-webkit-scrollbar{
     background-color: rgb(156, 4, 4);
     height: 8px;
     width: 4px;
 }
 
-.formulario::-webkit-scrollbar-thumb {
+.formulario::-webkit-scrollbar-thumb{
     background: white;
     margin-top: 4%;
 }
 
 #Enviar {
+    display: block;
+    margin: 0 auto;
     background-color: transparent;
     border: 2px solid #9C0404;
     border-radius: 5px;
@@ -288,6 +358,9 @@ input[type=email] {
     color: #9C0404;
     font-weight: 900;
     transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .7s;
+}
+.fa-paper-plane{
+    margin-right: 8px;
 }
 
 textarea {
@@ -297,16 +370,12 @@ textarea {
     border: 2px solid #9C0404;
 }
 
-input[type="submit"] {
-    display: block;
-    margin: 0 auto;
-}
 
 input[type="radio"] {
     display: none;
 }
 
-label {
+.gen{
     text-align: center;
     margin-bottom: 5%;
     border: 2px solid rgb(154, 4, 4);
@@ -338,44 +407,52 @@ footer {
     margin-top: 2%;
     font-family: 'Nunito', sans-serif;
 }
-
-.box_footer {
-    padding-bottom: 20px;
+.footer-alto{
+    padding-bottom: 2%;
+}
+.contactzone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.contactzone a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    /* background-color: white; */
+    padding: 1%;
+    border-radius: 50%;
+}
+.info-contact hr{
+    width: 50%;
     margin: auto;
-}
-
-.box_footer h4 {
-    text-align: center;
-    font-size: 16px;
-}
-
-.box_footer a,
-.box_footer {
-    text-align: center;
-    color: rgba(255, 255, 255);
-    font-weight: 600;
-}
-
-.box_footer a:hover {
-    opacity: 0.8;
-}
-
-.aviso-footer {
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-}
-
-.aviso-footer p {
-    margin-top: 1%;
-    margin-bottom: 1%;
-    color: rgba(226, 226, 226, 0.61);
-}
-
-.aviso-footer hr {
     border: none;
-    height: 1px;
-    background-color: rgb(255, 255, 255);
+    background: white;
+    height: 2px;
+}
+.info-contact ul{
+    display: flex;
+    justify-content: center;
+}
+.info-contact ul a{
+    color: white;
+    text-decoration: none;
+}
+.footer-bajo{
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+.politicas span{
+    font-weight: 500;
+}
+.me a{
+    color: #9C0404;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 
@@ -400,19 +477,22 @@ footer {
         width: 450px;
         height: 450px;
     }
+    .tabla{
+        width: 1155px;
+    }
 
     table {
         font-size: 25px;
     }
-
-    .def-tablas h1 {
-        font-size: 40px;
+    .imagen-maqueta{
+        width: 800px;
     }
-
-    .def-tablas p {
+    .def-maquetacion{
         font-size: 25px;
     }
-
+    .def-elemetos-basicos{
+        font-size: 25px;
+    }
     .masinformacion h1 {
         font-size: 40px;
     }
@@ -432,16 +512,37 @@ footer {
     #Enviar {
         font-size: 25px;
     }
+    .contactzone a{
+        font-size: 50px;
+    }
+    .info-contact ul a{
+        font-size: 25px;
+    }
+    .politicas p{
+        font-size: 25px;
+    }
+    .me p{
+        font-size: 25px;
+    }
 }
 @media screen and (max-width:1321px) {
     .definicion_js, .definicion_css, .definicion_html {
         width: 100%;
     }
 }
+@media screen and (max-width:1141px) {
+    .imagen-maqueta{
+        width: 300px;
+    }
+    .def-maquetacion{
+        width: 60%;
+        font-size: 15px;
+    }
+}
 @media screen and (max-width:1014px) {
     .masinformacion{
         width: 100%;
-        text-align: center;
+        text-align: justify;
         margin-bottom: 5%;
     }
     .formulario{
@@ -451,26 +552,42 @@ footer {
 
 @media screen and (max-width: 1024px) {
    .card{
-    width:45%;
+    width:35%;
     height: 520px;
+   }
+   .tabla{
+    width: 55%;
+   }
+}
+@media screen and (max-width:878px) {
+   .navbar{
+    justify-content: center;
    }
 }
 @media screen and (max-width: 768px) {
+    li{
+        margin-right: 5%;
+    }
+    .fa-solid{
+        display: initial;
+        margin-right: 10px;
+    }
     .hamburger{
         display: block ;
     }
     .navbar{
+        justify-content: space-between;
         flex-wrap: nowrap;
     }
     .navbar ul{
         left: 100%;
-        justify-content: start;
+        align-items: flex-end;
         height: 100%;
         top: 85px;
         position: fixed;
         flex-direction: column;
         background-color: #9c0404dc;
-        width: 110%;
+        width: 100%;
         transition: 0.3s ;
     }
     .navbar.active ul{
@@ -494,16 +611,103 @@ footer {
         justify-content: center;
     }
     .card{
-        width: 90%;
+        width: 70%;
         height: fit-content;
     }
+    .ver-mas-def{
+        text-decoration: underline;
+        color: #9C0404;
+    }
+    .ver-mas-def:hover{
+        background-color: transparent;
+    }
+
+    .ver-mas-def{
+        visibility: visible;
+    }
+    .mas-contenido{
+        display: none;
+    }
+
+    #check-0:checked ~ .mas-contenido,
+    #check-1:checked ~ .mas-contenido,
+    #check-2:checked ~ .mas-contenido{
+        display: block;
+    }
+    #check-0:checked ~ .ver-mas-def,
+    #check-1:checked ~ .ver-mas-def,
+    #check-2:checked ~ .ver-mas-def{
+        visibility: hidden;  
+    }
+    #check-0:checked ~ .ver-mas-def::after,
+    #check-1:checked ~ .ver-mas-def::after,
+    #check-2:checked ~ .ver-mas-def::after{
+        content: "Ver Menos";
+        display: block;
+        visibility: visible;
+    }
+    .def-maquetacion{
+        width: 100%;
+    }
+    .def-maquetacion h1{
+        text-align: center;
+    }
+    .imagen-maqueta{
+        width: 100%;
+    }
+
+    .def-elemetos-basicos{
+        margin-top: 10%;
+        width: 100%;
+    }
+    .def-elemetos-basicos h1{
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    .tabla{
+        width: 100%;
+    }
+    #tablas{
+        margin-bottom: 10%;
+        border-bottom-left-radius: 10px;
+    }
+    .footer-bajo{
+        padding-top: 4%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .politicas p, .me p{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
 }
 @media screen and (max-width:425px) {
+    .card{
+        width: 90%;
+    }
     .navbar .logo{
         margin: 10px 0px;
     }
     .navbar ul{
         top: 100px;
+    }
+    .definicion-titulo{
+        text-align: center;
+    }
+    .info-contact{
+        margin-top: 5%;
+    }
+    .info-contact ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 6%;
+    }
+    .info-contact a{
+        text-align: center;
+        margin:100px;
     }
     
 }
